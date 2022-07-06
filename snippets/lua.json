@@ -6,6 +6,17 @@
         ],
         "description": "Require module"
     },
+    "module": {
+        "prefix": "mod",
+        "body": [
+            "local M = {}\n",
+            "function M.setup()",
+            "\t${0}",
+            "end\n",
+            "return M"
+        ],
+        "description": "Neovim lua module"
+    },
     "return": {
         "prefix": "rt",
         "body": [
