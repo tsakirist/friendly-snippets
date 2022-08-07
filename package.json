@@ -87,6 +87,10 @@
         "path": "./snippets/php.json"
       },
       {
+        "language": "quarto",
+        "path": "./snippets/quarto.json"
+      },
+      {
         "language": "rescript",
         "path": "./snippets/rescript.json"
       },
@@ -201,8 +205,16 @@
         "path": "./snippets/javascript/react-native.json"
       },
       {
+        "language": "javascriptreact",
+        "path": "./snippets/javascript/next.json"
+      },
+      {
         "language": "typescriptreact",
         "path": "./snippets/javascript/react-ts.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/javascript/next-ts.json"
       },
       {
         "language": "typescriptreact",
@@ -213,7 +225,7 @@
           "javascriptreact",
           "typescriptreact"
         ],
-        "path": "./snippets/javascript/vscode-react.json"
+        "path": "./snippets/javascript/react-es7.json"
       },
       {
         "language": "svelte",
