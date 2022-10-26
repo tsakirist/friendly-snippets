@@ -166,7 +166,9 @@
           "html",
           "jade",
           "pug",
-          "eruby"
+          "eruby",
+          "javascriptreact",
+          "htmldjango"
         ],
         "path": "./snippets/html.json"
       },
@@ -381,6 +383,10 @@
         "path": "./snippets/kubernetes.json"
       },
       {
+        "language": "yaml",
+        "path": "./snippets/docker/docker-compose.json"
+      },
+      {
         "language": "make",
         "path": "./snippets/make.json"
       },
@@ -399,6 +405,10 @@
       {
         "language": "verilog",
         "path": "./snippets/verilog.json"
+      },
+      {
+        "language": "dockerfile",
+        "path": "./snippets/docker/docker_file.json"
       }
     ]
   }
