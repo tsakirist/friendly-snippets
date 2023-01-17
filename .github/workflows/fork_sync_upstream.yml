@@ -1,0 +1,37 @@
+name: 'Upstream Sync'
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Run every day at 00:00
+
+  workflow_dispatch:  # Run action on button click
+
+jobs:
+  sync_latest_from_upstream:
+    runs-on: ubuntu-latest
+    name: Sync fork with upstream
+
+    steps:
+    - name: Checkout target repository
+      uses: actions/checkout@v2
+      with:
+        ref: main
+        persist-credentials: false
+
+    - name: Sync upstream changes
+      id: sync
+      uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
+      with:
+        target_sync_branch: main
+        target_repo_token: ${{ secrets.GITHUB_TOKEN }}
+        upstream_sync_branch: main
+        upstream_sync_repo: rafamadriz/friendly-snippets
+        test_mode: false # Run tests instead of the Action
+
+    - name: New commits found
+      if: steps.sync.outputs.has_new_commits == 'true'
+      run: echo "New commits were found"
+
+    - name: No new commits found
+      if: steps.sync.outputs.has_new_commits == 'false'
+      run: echo "No new commits found"
