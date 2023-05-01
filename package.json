@@ -452,6 +452,10 @@
         "path": "./snippets/frameworks/unreal.json"
       },
       {
+        "language": "unity",
+        "path": "./snippets/frameworks/unity.json"
+      },
+      {
         "language": "verilog",
         "path": "./snippets/verilog.json"
       },
@@ -466,6 +470,13 @@
       {
         "language": "edge",
         "path": "./snippets/frameworks/edge.json"
+      },
+      {
+        "language": [
+          "powershell",
+          "ps1"
+        ],
+        "path": "./snippets/PowerShell.json"
       }
     ]
   }
